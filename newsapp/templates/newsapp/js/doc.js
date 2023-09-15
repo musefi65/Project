@@ -1,7 +1,7 @@
 // JavaScript by 20script.ir
 // tooltip
 this.tooltip = function(){	
-	/* CONFIG */		
+	/* CONFIGo */		
 		xOffset = 10;
 		yOffset = 20;		
 	/* END CONFIG */		
