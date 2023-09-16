@@ -1,5 +1,6 @@
 from django.shortcuts import render,HttpResponse
-
+from .models import *
 # Create your views here.
 def home(request):
-    return render(request,"newsapp\index.html")
+    l=news.objects.all()
+    return render(request,"newsapp\index.html",context={"news":l})
