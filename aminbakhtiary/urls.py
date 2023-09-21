@@ -5,5 +5,9 @@ from newsapp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',home)
+    path('', home),
+    #برای ساختن نمایش خبر 
+    path('news/<int:adad>', shownews), 
+
+
 ]

@@ -25,8 +25,9 @@
     <link rel="shortcut icon" href="{%static 'newsapp/images/favicon.ico'%}" type="image/x-icon" />
     <link rel="apple-touch-icon" href="{%static 'newsapp/images/apple-touch-icon.png'%}">
     
-    <!-- Design fonts -->
+<!-- Design fonts -->
      <link href=" {%static 'newsapp/css/css.css '%} "  rel="stylesheet" />
+
     <!-- Bootstrap core CSS -->
     <link href=" {%static 'newsapp/css/bootstrap.css '%} "  rel="stylesheet">
 
@@ -36,6 +37,7 @@
  
     <!-- Custom styles for this template -->
     <link href=" {%static 'newsapp/style.css '%} " rel="stylesheet">
+    
     <!-- Responsive styles for this template -->
     <link href=" {%static 'newsapp/css/responsive.css '%} " rel="stylesheet">
 
@@ -330,7 +332,7 @@
                         <br />
 
                 {%for item in news%}
-
+****
                             <div class="blog-list clearfix">
                                 <div class="blog-box row">
                                     <div class="col-md-4">
@@ -349,11 +351,14 @@
                                         <h4><a href="single.html" title=""> {{item.title}} </a></h4>
                                         <p>{{item.txt}}</p>
                                         <small class="firstsmall"><a class="bg-green" href="category-01.html" title="">{{item.catgory}}</a></small>
-                                        <small><a href="single.html" title="">12 بهمن 98</a></small>
-                                        <small><a href="author.html" title="">مدیر سایت</a></small>
+                                        <small><a href="single.html" title="">{{item.dtm}}</a></small>
+                                        <small><a href="author.html" title="">{{item.writer}}</a></small>
                                         <small><a href="single.html" title=""><i class="fa fa-eye"></i> 1114</a></small>
                                     </div><!-- end meta -->
                                 </div><!-- end blog-box -->
+
+
+                                ***
                 {%endfor%}
 
 
