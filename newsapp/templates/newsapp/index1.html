@@ -1,22 +1,15 @@
 ﻿{%extends "newsapp/master.html"%}
 
-
 {%block asli%}
 
 
-     <!-- لود استاتیک -->
-    {%load static%} 
+    <!-- لود استاتیک -->
+   <!-- {%load static%} --> 
 
 
-        <script>
-        function.payam(){
-            alert("خوش امدید ");
-        }
-     </script>
-     <body onload="payam()"></body>
-  
 
-   <section class="section first-section">
+
+ <section class="section first-section">
     <div class="container">
         <div id="demo" class="carousel slide " data-ride="carousel">
 
@@ -59,13 +52,13 @@
                 <div class="sidebar">
                     <div class="widget widgetbox">
                         <h4 class="lists_title">دیگر رسانه ها
-</h4>
+                        </h4>
 
                         <div class="trend-videos">
                             <div class="blog-box">
                                 <div class="post-media">
                                     <a href="single.html" title="">
-                                        <img src="{%static 'newsapp/upload/tech_menu_01.jpg ' %}" alt="" class="img-fluid">
+                                        <img src="upload/tech_menu_01.jpg" alt="" class="img-fluid">
                                       
                                     </a>
                                 </div><!-- end media -->
@@ -77,7 +70,7 @@
                             <div class="blog-box">
                                 <div class="post-media">
                                     <a href="single.html" title="">
-                                        <img src="{%static 'newsapp/upload/tech_menu_02.jpg ' %}" alt="" class="img-fluid">
+                                        <img src="upload/tech_menu_02.jpg" alt="" class="img-fluid">
                                    
                                     </a>
                                 </div><!-- end media -->
@@ -89,7 +82,7 @@
                             <div class="blog-box">
                                 <div class="post-media">
                                     <a href="single.html" title="">
-                                        <img src="{%static 'newsapp/upload/tech_menu_03.jpg ' %}" alt="" class="img-fluid">
+                                        <img src="upload/tech_menu_03.jpg" alt="" class="img-fluid">
                                         
                                     </a>
                                 </div><!-- end media -->
@@ -100,7 +93,7 @@
                             <div class="blog-box">
                                 <div class="post-media">
                                     <a href="single.html" title="">
-                                        <img src="{%static 'newsapp/upload/tech_menu_04.jpg ' %}" alt="" class="img-fluid">
+                                        <img src="upload/tech_menu_04.jpg" alt="" class="img-fluid">
 
                                     </a>
                                 </div><!-- end media -->
@@ -111,7 +104,7 @@
                             <div class="blog-box">
                                 <div class="post-media">
                                     <a href="single.html" title="">
-                                        <img src="{%static 'newsapp/upload/tech_menu_05.jpg ' %}" alt="" class="img-fluid">
+                                        <img src="upload/tech_menu_05.jpg" alt="" class="img-fluid">
 
                                     </a>
                                 </div><!-- end media -->
@@ -122,7 +115,7 @@
                             <div class="blog-box">
                                 <div class="post-media">
                                     <a href="single.html" title="">
-                                        <img src="{%static 'newsapp/upload/tech_menu_06.jpg ' %}" alt="" class="img-fluid">
+                                        <img src="upload/tech_menu_06.jpg" alt="" class="img-fluid">
 
                                     </a>
                                 </div><!-- end media -->
@@ -145,83 +138,40 @@
                         <h4 class="lists_title"> <a href="#"></a>آخرین اخبار</h4>
                     </div><!-- end blog-top -->
                 <br />
-
-                   
+*******
+        {%for item in news%}
++++++
                     <div class="blog-list clearfix">
                         <div class="blog-box row">
                             <div class="col-md-4">
                                 <div class="post-media">
                                     <a href="single.html" title="">
-                                        <img src="{%static 'newsapp/upload/tech_blog_01.jpg ' %}" alt="" class="img-fluid">
+                                        <img src="{%static 'newsapp/upload/tech_blog_01.jpg' %} " alt="" class="img-fluid">
                                         <div class="hovereffect"></div>
                                     </a>
                                 </div><!-- end media -->
                             </div><!-- end col -->
 
+                            
+                            
+
                             <div class="blog-meta big-meta col-md-8">
-                                <h4><a href="single.html" title="">لورم ایپسوم متن ساختگی با تولید سادگی </a></h4>
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطر</p>
-                                <small class="firstsmall"><a class="bg-green" href="category-01.html" title="">انتخابات</a></small>
-                                <small><a href="single.html" title="">12 بهمن 98</a></small>
-                                <small><a href="author.html" title="">مدیر سایت</a></small>
+                                <h4><a href="single.html" title=""> {{item.title}} </a></h4>
+                                <p>{{item.txt}}</p>
+                                <small class="firstsmall"><a class="bg-green" href="category-01.html" title="">{{item.catgory}}</a></small>
+                                <small><a href="single.html" title="">{{item.dtm}}</a></small>
+                                <small><a href="author.html" title="">{{item.writer}}</a></small>
                                 <small><a href="single.html" title=""><i class="fa fa-eye"></i> 1114</a></small>
                             </div><!-- end meta -->
-                        </div><!-- end blog-box --> 
-                        
-                        
-                        
-                        اااااااااا
-
-
-
-                        <hr class="invis">
-
-                        <div class="blog-box row">
-                            <div class="col-md-4">
-                                <div class="post-media">
-                                    <a href="single.html" title="">
-                                        <img src="{%static 'newsapp/upload/tech_blog_02.jpg ' %}" alt="" class="img-fluid">
-                                        <div class="hovereffect"></div>
-                                    </a>
-                                </div><!-- end media -->
-                            </div><!-- end col -->
-
-                            <div class="blog-meta big-meta col-md-8">
-                                <h4><a href="single.html" title="">لورم ایپسوم متن ساختگی با تولید سادگی </a></h4>
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطر</p>
-                                <small class="firstsmall"><a class="bg-green" href="category-01.html" title="">نرم‌افزار و اپلیکیشن</a></small>
-                                <small><a href="single.html" title="">12 بهمن 98</a></small>
-                                <small><a href="author.html" title="">مدیر سایت</a></small>
-                                <small><a href="single.html" title=""><i class="fa fa-eye"></i> 4412</a></small>
-                            </div><!-- end meta -->
-
-                            پپپپپپپپپ
                         </div><!-- end blog-box -->
 
-                        <hr class="invis">
 
-                        <div class="blog-box row">
-                            <div class="col-md-4">
-                                <div class="post-media">
-                                    <a href="single.html" title="">
-                                        <img src="{%static 'newsapp/upload/tech_blog_03.jpg ' %}" alt="" class="img-fluid">
-                                        <div class="hovereffect"></div>
-                                    </a>
-                                </div><!-- end media -->
-                            </div><!-- end col -->
+               ///////////         
+        {%endfor%}
 
-                            <div class="blog-meta big-meta col-md-8">
-                                <h4><a href="single.html" title="">لورم ایپسوم متن ساختگی با تولید سادگی </a></h4>
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطر</p>
-                                <small class="firstsmall"><a class="bg-green" href="category-01.html" title="">توسعه</a></small>
-                                <small><a href="single.html" title="">18 فروردین 1400</a></small>
-                                <small><a href="author.html" title="">مدیر سایت</a></small>
-                                <small><a href="single.html" title=""><i class="fa fa-eye"></i> 2313</a></small>
-                            </div><!-- end meta -->
-                        </div><!-- end blog-box -->
 
-                        <hr class="invis">
-                     
+
+
 
                         <hr class="invis">
 
@@ -229,139 +179,7 @@
                             <div class="col-md-4">
                                 <div class="post-media">
                                     <a href="single.html" title="">
-                                        <img src="{%static 'newsapp/upload/tech_blog_04.jpg ' %}" alt="" class="img-fluid">
-                                        <div class="hovereffect"></div>
-                                    </a>
-                                </div><!-- end media -->
-                            </div><!-- end col -->
-
-                            <div class="blog-meta big-meta col-md-8">
-                                <h4><a href="single.html" title="">لورم ایپسوم متن ساختگی با تولید سادگی </a></h4>
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطر</p>
-                                <small class="firstsmall"><a class="bg-green" href="category-01.html" title="">شورای شهر</a></small>
-                                <small><a href="single.html" title="">18 فروردین 1400</a></small>
-                                <small><a href="author.html" title="">مدیر سایت</a></small>
-                                <small><a href="single.html" title=""><i class="fa fa-eye"></i> 4441</a></small>
-                            </div><!-- end meta -->
-                        </div><!-- end blog-box -->
-
-                        <hr class="invis">
-
-                        <div class="blog-box row">
-                            <div class="col-md-4">
-                                <div class="post-media">
-                                    <a href="single.html" title="">
-                                        <img src="{%static 'newsapp/upload/tech_blog_05.jpg ' %}" alt="" class="img-fluid">
-                                        <div class="hovereffect"></div>
-                                    </a>
-                                </div><!-- end media -->
-                            </div><!-- end col -->
-
-                            <div class="blog-meta big-meta col-md-8">
-                                <h4><a href="single.html" title="">لورم ایپسوم متن ساختگی با تولید سادگی </a></h4>
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطر</p>
-                                <small class="firstsmall"><a class="bg-green" href="category-01.html" title="">ریاست جمهور</a></small>
-                                <small><a href="single.html" title="">1 فروردین 99</a></small>
-                                <small><a href="author.html" title="">مدیر سایت</a></small>
-                                <small><a href="single.html" title=""><i class="fa fa-eye"></i> 33312</a></small>
-                            </div><!-- end meta -->
-                        </div><!-- end blog-box -->
-
-                        <hr class="invis">
-
-                        <div class="blog-box row">
-                            <div class="col-md-4">
-                                <div class="post-media">
-                                    <a href="single.html" title="">
-                                        <img src="{%static 'newsapp/upload/tech_blog_06.jpg ' %}" alt="" class="img-fluid">
-                                        <div class="hovereffect"></div>
-                                    </a>
-                                </div><!-- end media -->
-                            </div><!-- end col -->
-
-                            <div class="blog-meta big-meta col-md-8">
-                                <h4><a href="single.html" title="">لورم ایپسوم متن ساختگی با تولید سادگی </a></h4>
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطر</p>
-                                <small class="firstsmall"><a class="bg-green" href="category-01.html" title="">انتخابات</a></small>
-                                <small><a href="single.html" title="">5 فروردین 99</a></small>
-                                <small><a href="author.html" title="">مدیر سایت</a></small>
-                                <small><a href="single.html" title=""><i class="fa fa-eye"></i> 4440</a></small>
-                            </div><!-- end meta -->
-                        </div><!-- end blog-box -->
-
-                        <hr class="invis">
-
-                        <div class="blog-box row">
-                            <div class="col-md-4">
-                                <div class="post-media">
-                                    <a href="single.html" title="">
-                                        <img src="{%static 'newsapp/upload/tech_blog_07.jpg ' %}" alt="" class="img-fluid">
-                                        <div class="hovereffect"></div>
-                                    </a>
-                                </div><!-- end media -->
-                            </div><!-- end col -->
-
-                            <div class="blog-meta big-meta col-md-8">
-                                <h4><a href="single.html" title="">لورم ایپسوم متن ساختگی با تولید سادگی </a></h4>
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطر</p>
-                                <small class="firstsmall"><a class="bg-green" href="category-01.html" title="">نرم‌افزار و اپلیکیشن</a></small>
-                                <small><a href="single.html" title="">20 فروردین 99</a></small>
-                                <small><a href="author.html" title="">مدیر سایت</a></small>
-                                <small><a href="single.html" title=""><i class="fa fa-eye"></i> 4412</a></small>
-                            </div><!-- end meta -->
-                        </div><!-- end blog-box -->
-
-                        <hr class="invis">
-
-                        <div class="blog-box row">
-                            <div class="col-md-4">
-                                <div class="post-media">
-                                    <a href="single.html" title="">
-                                        <img src="{%static 'newsapp/upload/tech_blog_08.jpg ' %}" alt="" class="img-fluid">
-                                        <div class="hovereffect"></div>
-                                    </a>
-                                </div><!-- end media -->
-                            </div><!-- end col -->
-
-                            <div class="blog-meta big-meta col-md-8">
-                                <h4><a href="single.html" title="">لورم ایپسوم متن ساختگی با تولید سادگی </a></h4>
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطر</p>
-                                <small class="firstsmall"><a class="bg-green" href="category-01.html" title="">اقتصاد</a></small>
-                                <small><a href="single.html" title="">25 فروردین 99</a></small>
-                                <small><a href="author.html" title="">مدیر سایت</a></small>
-                                <small><a href="single.html" title=""><i class="fa fa-eye"></i> 44123</a></small>
-                            </div><!-- end meta -->
-                        </div><!-- end blog-box -->
-
-                        <hr class="invis">
-
-                        <div class="blog-box row">
-                            <div class="col-md-4">
-                                <div class="post-media">
-                                    <a href="single.html" title="">
-                                        <img src="{%static 'newsapp/upload/tech_blog_09.jpg ' %}" alt="" class="img-fluid">
-                                        <div class="hovereffect"></div>
-                                    </a>
-                                </div><!-- end media -->
-                            </div><!-- end col -->
-
-                            <div class="blog-meta big-meta col-md-8">
-                                <h4><a href="single.html" title="">لورم ایپسوم متن ساختگی با تولید سادگی </a></h4>
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطر</p>
-                                <small class="firstsmall"><a class="bg-green" href="category-01.html" title="">نرم‌افزار و اپلیکیشن</a></small>
-                                <small><a href="single.html" title="">2 فروردین 99</a></small>
-                                <small><a href="author.html" title="">مدیر سایت</a></small>
-                                <small><a href="single.html" title=""><i class="fa fa-eye"></i> 2214</a></small>
-                            </div><!-- end meta -->
-                        </div><!-- end blog-box -->
-
-                        <hr class="invis">
-
-                        <div class="blog-box row">
-                            <div class="col-md-4">
-                                <div class="post-media">
-                                    <a href="single.html" title="">
-                                        <img src="{%static 'newsapp/upload/tech_blog_10.jpg ' %}" alt="" class="img-fluid">
+                                        <img src="upload/tech_blog_10.jpg" alt="" class="img-fluid">
                                         <div class="hovereffect"></div>
                                     </a>
                                 </div><!-- end media -->
@@ -408,7 +226,7 @@
                             <div class="blog-box">
                                 <div class="post-media">
                                     <a href="single.html" title="">
-                                        <img src="{%static 'newsapp/upload/tech_video_01.jpg ' %}" alt="" class="img-fluid">
+                                        <img src="upload/tech_video_01.jpg" alt="" class="img-fluid">
                                         <div class="hovereffect">
                                             <span class="videohover"></span>
                                         </div><!-- end hover -->
@@ -422,7 +240,7 @@
                             <div class="blog-box">
                                 <div class="post-media">
                                     <a href="single.html" title="">
-                                        <img src="{%static 'newsapp/upload/tech_video_02.jpg ' %}" alt="" class="img-fluid">
+                                        <img src="upload/tech_video_02.jpg" alt="" class="img-fluid">
                                         <div class="hovereffect">
                                             <span class="videohover"></span>
                                         </div><!-- end hover -->
@@ -436,7 +254,7 @@
                             <div class="blog-box">
                                 <div class="post-media">
                                     <a href="single.html" title="">
-                                        <img src="{%static 'newsapp/upload/tech_video_03.jpg ' %}" alt="" class="img-fluid">
+                                        <img src="upload/tech_video_03.jpg" alt="" class="img-fluid">
                                         <div class="hovereffect">
                                             <span class="videohover"></span>
                                         </div><!-- end hover -->
@@ -456,7 +274,7 @@
                             <div class="list-group">
                                 <a href="single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                     <div class="w-100 justify-content-between">
-                                        <img src="{%static 'newsapp/upload/tech_blog_08.jpg ' %}" alt="" class="img-fluid float-right">
+                                        <img src="upload/tech_blog_08.jpg" alt="" class="img-fluid float-right">
                                         <h5 class="mb-1">لورم ایپسوم متن ساختگی با تولید سادگی</h5>
                                         <small>16 اسفند 99</small>
                                     </div>
@@ -472,42 +290,42 @@
 
                                 <a href="single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                     <div class="w-100 last-item justify-content-between">
-                                        <img src="{%static 'newsapp/upload/tech_blog_03.jpg ' %}" alt="" class="img-fluid float-right">
+                                        <img src="upload/tech_blog_03.jpg" alt="" class="img-fluid float-right">
                                         <h5 class="mb-1">لورم ایپسوم متن ساختگی با تولید سادگی</h5>
                                         <small>16 اسفند 99</small>
                                     </div>
                                 </a>
                                 <a href="single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                     <div class="w-100 last-item justify-content-between">
-                                        <img src="{%static 'newsapp/upload/tech_blog_03.jpg ' %}" alt="" class="img-fluid float-right">
+                                        <img src="upload/tech_blog_03.jpg" alt="" class="img-fluid float-right">
                                         <h5 class="mb-1">لورم ایپسوم متن ساختگی با تولید سادگی</h5>
                                         <small>16 اسفند 99</small>
                                     </div>
                                 </a>
                                 <a href="single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                     <div class="w-100 last-item justify-content-between">
-                                        <img src="{%static 'newsapp/upload/tech_blog_04.jpg ' %}" alt="" class="img-fluid float-right">
+                                        <img src="upload/tech_blog_04.jpg" alt="" class="img-fluid float-right">
                                         <h5 class="mb-1">لورم ایپسوم متن ساختگی با تولید سادگی</h5>
                                         <small>16 اسفند 99</small>
                                     </div>
                                 </a>
                                 <a href="single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                     <div class="w-100 last-item justify-content-between">
-                                        <img src="{%static 'newsapp/upload/tech_blog_05.jpg ' %}" alt="" class="img-fluid float-right">
+                                        <img src="upload/tech_blog_05.jpg" alt="" class="img-fluid float-right">
                                         <h5 class="mb-1">لورم ایپسوم متن ساختگی با تولید سادگی</h5>
                                         <small>16 اسفند 99</small>
                                     </div>
                                 </a>
                                 <a href="single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                     <div class="w-100 last-item justify-content-between">
-                                        <img src="{%static 'newsapp/upload/tech_blog_06.jpg ' %}" alt="" class="img-fluid float-right">
+                                        <img src="upload/tech_blog_06.jpg" alt="" class="img-fluid float-right">
                                         <h5 class="mb-1">لورم ایپسوم متن ساختگی با تولید سادگی</h5>
                                         <small>16 اسفند 99</small>
                                     </div>
                                 </a>
                                 <a href="single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                     <div class="w-100 last-item justify-content-between">
-                                        <img src="{%static 'newsapp/upload/tech_blog_07.jpg ' %}" alt="" class="img-fluid float-right">
+                                        <img src="upload/tech_blog_07.jpg" alt="" class="img-fluid float-right">
                                         <h5 class="mb-1">لورم ایپسوم متن ساختگی با تولید سادگی</h5>
                                         <small>16 اسفند 99</small>
                                     </div>
@@ -524,7 +342,7 @@
                             <div class="list-group">
                                 <a href="single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                     <div class="w-100 justify-content-between">
-                                        <img src="{%static 'newsapp/upload/tech_blog_02.jpg ' %}" alt="" class="img-fluid float-right">
+                                        <img src="upload/tech_blog_02.jpg" alt="" class="img-fluid float-right">
                                         <h5 class="mb-1">لورم ایپسوم متن ساختگی با تولید سادگی</h5>
                                         <span class="rating">
                                             <i class="fa fa-star"></i>
@@ -538,7 +356,7 @@
 
                                 <a href="single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                     <div class="w-100 justify-content-between">
-                                        <img src="{%static 'newsapp/upload/tech_blog_03.jpg ' %}" alt="" class="img-fluid float-right">
+                                        <img src="upload/tech_blog_03.jpg" alt="" class="img-fluid float-right">
                                         <h5 class="mb-1">لورم ایپسوم متن ساختگی با تولید سادگی</h5>
                                         <span class="rating">
                                             <i class="fa fa-star"></i>
@@ -552,7 +370,7 @@
 
                                 <a href="single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                     <div class="w-100 last-item justify-content-between">
-                                        <img src="{%static 'newsapp/upload/tech_blog_07.jpg ' %}" alt="" class="img-fluid float-right">
+                                        <img src="upload/tech_blog_07.jpg" alt="" class="img-fluid float-right">
                                         <h5 class="mb-1">لورم ایپسوم متن ساختگی با تولید سادگی</h5>
                                         <span class="rating">
                                             <i class="fa fa-star"></i>
@@ -574,6 +392,7 @@
         </div><!-- end row -->
     </div><!-- end container -->
 </section>
+
 
 
 
