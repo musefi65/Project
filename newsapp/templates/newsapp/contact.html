@@ -1,12 +1,24 @@
-﻿{%extends "newsapp/master.html"%}
+﻿
+ <!-- Site Metas -->
+ <title>تماس با ما </title>
+
+
+{%extends "newsapp/master.html"%}
 
 {%block asli%}
+
+
+     <!-- لود استاتیک -->
+     {%load static%} 
+
+     
+       
 
 <div class="page-title lb single-wrapper">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                <h2><i class="fa fa-envelope-open-o bg-green"></i> تماس با ما <small class="hidden-xs-down hidden-sm-down">لورم ایپسوم متن ساختگی با تولید </small></h2>
+                <h2><i class="fa fa-envelope-open-o bg-green"></i> تماس با ما <small class="hidden-xs-down hidden-sm-down"> .       ارسال پیام برای هفته نامه امین بختیاری   .</small></h2>
             </div><!-- end col -->
             <div class="col-lg-4 col-md-4 col-sm-12 hidden-xs-down hidden-sm-down">
                 <ol class="breadcrumb">
@@ -36,11 +48,11 @@
                         </div>
                         <div class="col-lg-7">
                             <form class="form-wrapper">
-                                <input type="text" class="form-control" placeholder="نام شما">
-                                <input type="text" class="form-control" placeholder="پست الکترونیک">
-                                <input type="text" class="form-control" placeholder="شماره تماس">
-                                <input type="text" class="form-control" placeholder="موضوع">
-                                <textarea class="form-control" placeholder="متن پیام شما"></textarea>
+                                <input type="text" name="nam" class="form-control" placeholder="نام شما">
+                                <input type="text" name="email" class="form-control" placeholder="پست الکترونیک">
+                                <input type="text" name="tel" class="form-control" placeholder="شماره تماس">
+                                <input type="text" name="onvan" class="form-control" placeholder="موضوع">
+                                <textarea name="matn" class="form-control" placeholder="متن پیام شما"></textarea>
                                 <button type="submit" class="btn btn-primary">ارسال <i class="fa fa-envelope-open-o"></i></button>
                             </form>
                         </div>

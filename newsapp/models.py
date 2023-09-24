@@ -43,14 +43,17 @@ class news(models.Model):
         return self.title
     
 
-class contact(models.Model):
-    nam=models.CharField(max_length=50)
-    email=models.CharField(max_length=50)
-    onvan=models.CharField(max_length=150)
-    matn=models.CharField(max_length=500)
+ 
+class contactcls(models.Model):
+    name=models.CharField(max_length=40,) 
+    email=models.CharField(max_length=50,)
+    mobile=models.CharField(max_length=50)
+    subject=models.CharField(max_length=200)
+    message=models.CharField(max_length=500)  
 
-    def __str__(self) -> str:
-        return self.onvan
+    def __str__(self) :
+        return self.subject
+    
 
 class coment(models.Model):
     newss=models.ForeignKey(news,on_delete=models.CASCADE)
