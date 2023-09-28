@@ -11,6 +11,7 @@ urlpatterns = [
     #برای ساختن نمایش خبر 
     path('news/<int:adad>', shownews),
     path('contact', contact), 
+    path('aboutus', home),
 
 ]
 urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
