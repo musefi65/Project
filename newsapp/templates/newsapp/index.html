@@ -23,21 +23,42 @@
 
             <!-- Indicators -->
             <ul class="carousel-indicators">
+
+
                 <li data-target="#demo" data-slide-to="0" class="active"></li>
                 <li data-target="#demo" data-slide-to="1"></li>
                 <li data-target="#demo" data-slide-to="2"></li>
             </ul>
 
+            
             <!-- The slideshow -->
-            <div class="carousel-inner ">
+            <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{%static 'newsapp/upload/slider_01.jpg ' %}" class="img-fluid">
+                    <a href="لینک_خبر_اول.html">
+                        <img src="{%static 'newsapp/upload/slider_01.jpg ' %}" class="img-fluid">
+                        <div class="carousel-caption">
+                            <h3><a  back class="lists_title" href="/shownews/1"> {{news.0.title}}</a></h3>
+                            <p><a  class="nav-link" href="لینک_خبر_اول.html"> {{news.0.titr1}} </a></p>
+                        </div>
+                    </a>
                 </div>
                 <div class="carousel-item">
-                    <img src="{%static 'newsapp/upload/slider_02.jpg ' %}" class="img-fluid">
+                    <a href="لینک_خبر_دوم.html">
+                        <img src="{%static 'newsapp/upload/slider_02.jpg ' %}" class="img-fluid">
+                        <div class="carousel-caption">
+                            <h3><a href="لینک_خبر_دوم.html">عنوان خبر دوم</a></h3>
+                            <p><a href="لینک_خبر_دوم.html">متن خبر دوم</a></p>
+                        </div>
+                    </a>
                 </div>
                 <div class="carousel-item">
-                    <img src="{%static 'newsapp/upload/slider_03.jpg ' %}" class="img-fluid">
+                    <a href="لینک_خبر_سوم.html">
+                        <img src="{%static 'newsapp/upload/slider_03.jpg ' %}" class="img-fluid">
+                        <div class="carousel-caption">
+                            <h3><a href="/news/{{item.id}}">عنوان خبر سوم</a></h3>
+                            <p><a href="/news/{{item.id}}">متن خبر سوم</a></p>
+                        </div>
+                    </a>
                 </div>
             </div>
 
@@ -153,9 +174,11 @@
                 </div><!-- end sidebar -->
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 ">
+
                 <div class="page-wrapper mainbox">
                     <div class="blog-top clearfix">
                         <h4 class="lists_title"> <a href="#"></a>آخرین اخبار</h4>
+                        {%for item in news%}
                     </div><!-- end blog-top -->
                     <br />
 
@@ -163,7 +186,7 @@
 
 
 
-                        {%for item in news%}
+                     
                         <div class="blog-list clearfix">
                             <div class="blog-box row">
                                 <div class="col-md-4">
@@ -180,7 +203,7 @@
 
 
                                 <div class="blog-meta big-meta col-md-8">
-                                    <h4><a href="/news/{{item.id}}" title=""> {{item.title}} </a></h4>
+                                    <h4><a href="/shownews/{{item.id}}" title=""> {{item.title}} </a></h4>
                                     <p>{{item.txt}}</p>
                                     <small class="firstsmall"><a class="bg-green" href="category-01.html"
                                             title="">{{item.catgory}}</a></small>
@@ -189,13 +212,15 @@
                                     <small><a href="single.html" title=""><i class="fa fa-eye"></i> 1114</a></small>
                                 </div><!-- end meta -->
                             </div><!-- end blog-box -->
-                            {%endfor%}
+                           
 
                                                     </div><!-- end meta -->
                     </div><!-- end blog-box -->
 
                     <hr class="invis">
                 </div><!-- end blog-list -->
+
+                {%endfor%}
             </div><!-- end page-wrapper -->
 
             <hr class="invis">

@@ -9,7 +9,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
     #برای ساختن نمایش خبر 
-    path('news/<int:adad>', shownews),
+    path('shownews/<int:adad>', shownews),
     path('contact', contact), 
     path('aboutus', home),
 
