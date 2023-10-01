@@ -178,12 +178,12 @@
                 <div class="page-wrapper mainbox">
                     <div class="blog-top clearfix">
                         <h4 class="lists_title"> <a href="#"></a>آخرین اخبار</h4>
-                        {%for item in news%}
+                       
                     </div><!-- end blog-top -->
                     <br />
 
 
-
+                    {%for item in news%}
 
 
                      
@@ -212,15 +212,15 @@
                                     <small><a href="single.html" title=""><i class="fa fa-eye"></i> 1114</a></small>
                                 </div><!-- end meta -->
                             </div><!-- end blog-box -->
-                           
+                           {%endfor%}
 
-                                                    </div><!-- end meta -->
+                                                    </div><!-- end meta --> 
                     </div><!-- end blog-box -->
-
+                   
                     <hr class="invis">
                 </div><!-- end blog-list -->
 
-                {%endfor%}
+               
             </div><!-- end page-wrapper -->
 
             <hr class="invis">
