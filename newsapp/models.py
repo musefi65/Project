@@ -44,7 +44,7 @@ class news(models.Model):
     
 
  
-class contactcls(models.Model):
+class contact_us(models.Model):
     name=models.CharField(max_length=40,) 
     email=models.CharField(max_length=50,)
     mobile=models.CharField(max_length=50)
